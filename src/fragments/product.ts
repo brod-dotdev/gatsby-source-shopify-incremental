@@ -161,16 +161,6 @@ export function productFragment(version: ApiVersion) {
         }
       }
       vendor
-      compareAtPriceRange {
-        maxVariantPrice {
-          amount
-          currencyCode
-        }
-        minVariantPrice {
-          amount
-          currencyCode
-        }
-      }
     }
   `;
 }

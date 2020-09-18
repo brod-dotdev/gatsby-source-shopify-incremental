@@ -3803,8 +3803,6 @@ export type Product = Node &
     availableForSale: Scalars['Boolean'];
     /** List of collections a product belongs to. */
     collections: CollectionConnection;
-    /** The compare at price of the product across all variants. */
-    compareAtPriceRange: ProductPriceRange;
     /** The date and time when the product was created. */
     createdAt: Scalars['DateTime'];
     /** Stripped description of the product, single line with HTML tags removed. */
@@ -5020,10 +5018,6 @@ export type ProductNodeFragment = Pick<
     maxVariantPrice: Pick<MoneyV2, 'amount' | 'currencyCode'>;
   };
   variants: { edges: Array<{ node: ProductVariantNodeFragment }> };
-  compareAtPriceRange: {
-    maxVariantPrice: Pick<MoneyV2, 'amount' | 'currencyCode'>;
-    minVariantPrice: Pick<MoneyV2, 'amount' | 'currencyCode'>;
-  };
 };
 
 export type LoadArticlesQueryVariables = Exact<{
